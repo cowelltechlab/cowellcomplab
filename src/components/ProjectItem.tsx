@@ -39,7 +39,7 @@ export default function ProjectItem({
     if (!image || !title) return null;
     return (
       <img
-        src={`.${image}`}
+        src={image}
         alt={title}
         className="w-full h-64 md:h-72 object-cover rounded-2xl"
       />

@@ -121,7 +121,7 @@ export function Header() {
             to="/"
             className="text-xl font-heading font-medium leading-tight text-primary flex items-center gap-4"
           >
-            <img src="./img/logo.svg" alt="Co-Well Lab" className="w-12 h-12" />
+            <img src="img/logo.svg" alt="Co-Well Lab" className="w-12 h-12" />
             Co-Well
             <br />
             Lab

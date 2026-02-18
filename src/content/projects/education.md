@@ -1,7 +1,7 @@
 ---
 title: Higher Education for Neurodivergent Students
 year: "2025"
-image: "/img/projects/Edu.png"
+image: "img/projects/Edu.png"
 description: Education description for the projects page
 publications:
   - lowy2024research

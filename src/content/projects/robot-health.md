@@ -1,7 +1,7 @@
 ---
 title: Human-Robot Interaction at Hospital
 year: "2024"
-image: "/img/projects/HRI.png"
+image: "img/projects/HRI.png"
 description: Robot dog project description for the projects page
 publications:
   - kong2024co

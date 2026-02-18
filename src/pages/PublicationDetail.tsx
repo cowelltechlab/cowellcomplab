@@ -11,23 +11,16 @@ import {
   LinkIcon,
   TrophyIcon,
 } from "@heroicons/react/16/solid";
+import BackButton from "../components/BackButton";
 
 export function PublicationDetail() {
   const { slug } = useParams<{ slug: string }>();
   const item = slug ? getPublicationBySlug(slug) : null;
 
-  const renderbackbutton = () => (
-    <Link
-      to="/publications"
-      className="mb-8 inline-block text-primary hover:underline"
-    >
-      ← Back to Publications
-    </Link>
-  );
   if (!item) {
     return (
       <div className="mx-auto max-w-2xl px-4 py-12 text-center">
-        {renderbackbutton()}
+        <BackButton path="/publications" to="Publications" />
         <p className="text-body-muted">Publication not found.</p>
       </div>
     );
@@ -126,25 +119,23 @@ export function PublicationDetail() {
     );
 
   return (
-    <ScrollRevealContainer className="mx-auto max-w-6xl px-8 py-12">
-      {renderbackbutton()}
-      <article className="pb-8">
-        <div className="flex flex-col gap-3">
-          {renderVenue()}
-          {renderTitle()}
-          {renderAuthors()}
-          {renderMemberCards()}
-          <div className="mb-4 flex flex-wrap gap-4">
-            {renderDoi()}
-            {renderPDF()}
-          </div>
+    <div className="mx-auto max-w-6xl px-8 py-12">
+      <BackButton path="/publications" to="Publications" />
+      <ScrollRevealContainer className="flex flex-col gap-3">
+        {renderVenue()}
+        {renderTitle()}
+        {renderAuthors()}
+        {renderMemberCards()}
+        <div className="mb-4 flex flex-wrap gap-4">
+          {renderDoi()}
+          {renderPDF()}
         </div>
-        <div className="flex flex-col gap-6">
-          {renderImage()}
-          {renderAbstract()}
-          <Markdown content={content} />
-        </div>
-      </article>
-    </ScrollRevealContainer>
+      </ScrollRevealContainer>
+      <ScrollRevealContainer className="flex flex-col gap-6">
+        {renderImage()}
+        {renderAbstract()}
+        <Markdown content={content} />
+      </ScrollRevealContainer>
+    </div>
   );
 }

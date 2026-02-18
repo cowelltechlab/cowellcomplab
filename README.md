@@ -83,7 +83,7 @@ This could be changed after the custom domain is purchased.
 
 Content lives in `src/content/` as Markdown files with YAML frontmatter. The **filename** becomes the slug (used in URLs and for linking). Add a new `.md` file in the appropriate folder and use one of the templates below.
 
-Image link could be relative path or global path (already uploaded in the internet)
+**Image paths in content:** The site uses HTML `<base href="/cowellcomplab/">`, so all **local** images must use **relative** paths. Use `img/...` or `./img/...` (e.g. `img/projects/foo.png`), **not** a leading slash like `/img/...` (that would 404 on GitHub Pages). External images can use full URLs (`https://...`).
 
 Below data schema could be changed later...
 
@@ -170,7 +170,7 @@ Optional articles in Markdown...
 ---
 title: Project Title
 description: Brief description for the projects list
-image: ./img/projects/my-project.png
+image: img/projects/my-project.png
 publications:
   - smith2026title
   - doe2025paper

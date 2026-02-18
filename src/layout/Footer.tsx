@@ -62,7 +62,7 @@ export function Footer() {
       <footer className="border-t border-gray-200 py-12">
         <div className="mx-auto max-w-6xl px-4 flex flex-col sm:flex-row sm:justify-between gap-4">
           <div className="flex flex-col gap-2">
-            <img src="./img/logo.svg" alt="Co-Well Lab" className="w-12 h-12" />
+            <img src="img/logo.svg" alt="Co-Well Lab" className="w-12 h-12" />
             <h3 className="text-primary-lighter mt-1">
               Collaborative Wellness Computing Lab
             </h3>
@@ -103,14 +103,14 @@ export function Footer() {
           <div className="flex flex-row gap-2 sm:flex-col sm:gap-4">
             <Link to="https://ic.gatech.edu/" className="w-1/2 sm:w-full">
               <img
-                src="./img/ic-logo.png"
+                src="img/ic-logo.png"
                 alt="Logo of School of Interactive Computing"
                 className="sm:w-72"
               />
             </Link>
             <Link to="https://www.gatech.edu/about" className="w-1/2 sm:w-full">
               <img
-                src="./img/gt-logo.png"
+                src="img/gt-logo.png"
                 alt="Logo of Georgia Institute of Technology"
                 className="sm:w-60"
               />

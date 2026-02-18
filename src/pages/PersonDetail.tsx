@@ -7,6 +7,8 @@ export function PersonDetail() {
   const { slug } = useParams<{ slug: string }>();
   const item = slug ? getPersonBySlug(slug) : null;
 
+  // not designed yet
+
   if (!item) {
     return (
       <div className="mx-auto max-w-2xl px-4 py-12 text-center">
