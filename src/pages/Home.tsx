@@ -52,7 +52,7 @@ export function Home() {
           <div className="md:w-1/3 w-full">
             <div className="h-32 md:h-full">
               <img
-                src="/img/groupPhoto/112225_thanksgiving.jpg"
+                src="./img/groupPhoto/112225_thanksgiving.jpg"
                 alt="Collaborative Wellness Computing Lab group"
                 className="h-full w-full object-cover"
               />
@@ -102,7 +102,7 @@ export function Home() {
             {projects.map((p) => (
               <Link key={p.slug} to={`/projects/${p.slug}`} className="group">
                 <img
-                  src={p.image}
+                  src={`.${p.image}`}
                   alt={p.title}
                   className="w-full h-fit object-cover rounded-4xl group-hover:scale-110 transition-all duration-300 ease-out"
                 />

@@ -34,7 +34,7 @@ export function ProjectDetail() {
         ← Back to Projects
       </Link>
       <img
-        src={data.image}
+        src={`..${data.image}`}
         alt={data.title}
         className="w-100 my-4 h-fit object-cover rounded-2xl mx-auto"
       />

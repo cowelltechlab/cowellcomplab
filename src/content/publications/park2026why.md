@@ -5,7 +5,7 @@ year: "2026"
 month: "04"
 venue: "CHI"
 type: Conference
-image: "/img/publications/park2026why-1.png"
+image: "./img/publications/park2026why-1.png"
 people:
   - hyesoo-park
   - jennifer-kim
