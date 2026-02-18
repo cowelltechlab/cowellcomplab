@@ -1,6 +1,7 @@
 // import { Link } from "react-router-dom";
 import { getPeopleList } from "../loadContent";
 import { PageTitle } from "../layout/PageTitle";
+import { DocumentTitle } from "../components/DocumentTitle";
 import { CurrentMemberItem } from "../components/CurrentMemberItem";
 import AlumniMemberItem from "../components/AlumniMemberItem";
 
@@ -12,6 +13,7 @@ export function People() {
 
   return (
     <div className="mx-auto max-w-6xl px-8 py-12">
+      <DocumentTitle section="People" />
       <PageTitle title="People" />
       <h2 className="mt-20 mb-8 text-2xl text-primary">Current Members</h2>
       <div className="grid gap-y-12 gap-x-8 sm:grid-cols-2">

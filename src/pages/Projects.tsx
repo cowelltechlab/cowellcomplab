@@ -1,12 +1,14 @@
 import { getProjectsList } from "../loadContent";
 import { PageTitle } from "../layout/PageTitle";
 import ProjectItem from "../components/ProjectItem";
+import { DocumentTitle } from "../components/DocumentTitle";
 
 export function Projects() {
   const projects = getProjectsList();
 
   return (
     <div className="mx-auto max-w-6xl px-8 py-12">
+      <DocumentTitle section="Projects" />
       <PageTitle title="Our Projects" />
       {projects.map((p, index) => {
         const isEven = index % 2 === 0;

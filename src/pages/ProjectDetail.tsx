@@ -3,6 +3,7 @@ import { getProjectBySlug, getPublicationsBySlugs } from "../loadContent";
 import { Markdown } from "../components/Markdown";
 import BackButton from "../components/BackButton";
 import RelatedPubItem from "../components/RelatedPubItem";
+import { DocumentTitle } from "../components/DocumentTitle";
 import { ScrollRevealContainer } from "../components/FadeInOnScroll";
 
 export function ProjectDetail() {
@@ -25,6 +26,7 @@ export function ProjectDetail() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
+      <DocumentTitle section="Projects" />
       <BackButton path="/projects" to="Projects" />
       <ScrollRevealContainer className="flex flex-col gap-2">
         <img

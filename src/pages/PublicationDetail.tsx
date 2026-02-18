@@ -12,6 +12,7 @@ import {
   TrophyIcon,
 } from "@heroicons/react/16/solid";
 import BackButton from "../components/BackButton";
+import { DocumentTitle } from "../components/DocumentTitle";
 
 export function PublicationDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -120,6 +121,7 @@ export function PublicationDetail() {
 
   return (
     <div className="mx-auto max-w-6xl px-8 py-12">
+      <DocumentTitle section="Publications" />
       <BackButton path="/publications" to="Publications" />
       <ScrollRevealContainer className="flex flex-col gap-3">
         {renderVenue()}

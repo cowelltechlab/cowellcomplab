@@ -3,6 +3,7 @@ import { getNewsBySlug } from "../loadContent";
 import { Markdown } from "../components/Markdown";
 import { dateToShortString } from "../lib/dateFormat";
 import BackButton from "../components/BackButton";
+import { DocumentTitle } from "../components/DocumentTitle";
 
 export function NewsDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -20,6 +21,7 @@ export function NewsDetail() {
   const { data, content } = item;
   return (
     <div className="mx-auto max-w-2xl px-4 py-12">
+      <DocumentTitle section="News" />
       <BackButton path="/news" to="News" />
 
       <div className="flex items-center gap-2 my-4">

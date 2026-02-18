@@ -2,12 +2,14 @@ import { Link } from "react-router-dom";
 import { getNewsList } from "../loadContent";
 import { dateToShortString } from "../lib/dateFormat";
 import { PageTitle } from "../layout/PageTitle";
+import { DocumentTitle } from "../components/DocumentTitle";
 
 export function News() {
   const news = getNewsList();
 
   return (
     <div className="mx-auto max-w-6xl px-8 py-12">
+      <DocumentTitle section="News" />
       <PageTitle title="News" />
       <div className="flex flex-col md:grid md:grid-cols-3 gap-6">
         {news.map((n) => (

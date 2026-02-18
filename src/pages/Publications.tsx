@@ -1,6 +1,7 @@
 import { getPublicationsList } from "../loadContent";
 import { PubItem } from "../components/PubItem";
 import { PageTitle } from "../layout/PageTitle";
+import { DocumentTitle } from "../components/DocumentTitle";
 
 export function Publications() {
   const publications = getPublicationsList();
@@ -13,6 +14,7 @@ export function Publications() {
 
   return (
     <div className="mx-auto max-w-6xl px-8 py-12">
+      <DocumentTitle section="Publications" />
       <PageTitle title="Publications" />
       <div className="space-y-25">
         {yearSections.map((year) => {
