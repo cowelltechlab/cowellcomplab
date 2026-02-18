@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* Theme: extracted from co-wells-lab-site.webflow.io – adjust via dev tools if needed */
+@theme {
+  /* Colors – academic lab style (refine from original site) */
+  --color-primary: #007d79;
+  --color-primary-light: #b5e2d7;
+  --color-primary-lighter: #36a19d;
+  --color-primary-dark: #005956;
+  --color-accent: #007d79;
+  --color-background: #ffffff;
+  --color-background-muted: #2bbd941a;
+  --color-body: #1a202c;
+  --color-body-muted: #4a5568;
+
+  /* Fonts – DM Sans (body/default), Poppins (headings) */
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-heading: "Poppins", system-ui, sans-serif;
+}
+
+/* Use in components: font-sans → DM Sans, font-heading → Poppins */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+}
+
+/* Headings use Poppins by default; override with font-sans where needed */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
