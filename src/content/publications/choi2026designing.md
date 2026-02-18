@@ -6,4 +6,6 @@ month: "04"
 venue: "CHI"
 type: Conference
 image: "https://faculty.cc.gatech.edu/~jkim693/img/diary.png"
+people:
+  - jennifer-kim
 ---

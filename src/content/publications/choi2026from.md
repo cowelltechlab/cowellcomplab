@@ -6,6 +6,8 @@ month: "04"
 venue: "CHI"
 image: "https://faculty.cc.gatech.edu/~jkim693/img/m_therapy.png"
 type: Conference
+people:
+  - jennifer-kim
 ---
 
 _\* Co-senior authors contributed equally to this research._

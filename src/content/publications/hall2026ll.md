@@ -7,4 +7,8 @@ venue: "CHI"
 shortTitle: "LL.me"
 type: Conference
 image: "https://faculty.cc.gatech.edu/~jkim693/img/llm.png"
+people:
+  - kaely-hall
+  - max-ohsawa
+  - jennifer-kim
 ---

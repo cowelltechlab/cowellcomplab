@@ -33,13 +33,31 @@ export function Home() {
   return (
     <div>
       {/* About Us */}
-      <section className="py-16 bg-background-muted">
-        <div className="mx-auto max-w-6xl px-8">
-          <h3 className="text-3xl text-accent text-center font-light">
-            The <span className="font-medium">Co</span>llaborative{" "}
-            <span className="font-medium">Well</span>ness <br />
-            <span className="font-medium">Comp</span>uting Lab
-          </h3>
+      <section className="bg-background-muted">
+        <div className="mx-auto max-w-6xl flex flex-col md:flex-row gap-4 md:items-stretch">
+          <div className="md:w-2/3 flex flex-col gap-4 px-8 py-4 md:py-8 justify-center">
+            <h3 className="text-2xl md:text-3xl text-accent font-light leading-snug pt-8">
+              Welcome to <br />
+              <span className="font-medium">Co</span>llaborative{" "}
+              <span className="font-medium">Well</span>ness <br />
+              <span className="font-medium">Comp</span>uting Lab!
+            </h3>
+            <p className="text-body-muted text-sm md:pb-6">
+              We are a team of researchers who are part of the Georgia Tech
+              School of Interactive Computing. Our research focuses on the
+              intersection of technology and society, with a particular emphasis
+              on the impact of technology on human wellbeing and social equity.
+            </p>
+          </div>
+          <div className="md:w-1/3 w-full">
+            <div className="h-32 md:h-full">
+              <img
+                src="/img/groupPhoto/112225_thanksgiving.jpg"
+                alt="Collaborative Wellness Computing Lab group"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -71,16 +89,16 @@ export function Home() {
       </section>
 
       {/* Projects preview */}
-      <section className="py-16">
-        <div className="mx-auto max-w-6xl px-8 flex flex-col gap-2">
+      <section className="py-12">
+        <div className="mx-auto max-w-6xl px-8 flex flex-col gap-4">
           {renderTitle("Our Projects")}
-          <h2 className="text-3xl font-light text-body">
+          <h2 className="text-2xl font-light text-body">
             Collaborative AI for Real-World Impact
           </h2>
           <div className="flex justify-end">
             <LinkButton linkTo="/projects">View All Projects</LinkButton>
           </div>
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3 items-end">
             {projects.map((p) => (
               <Link key={p.slug} to={`/projects/${p.slug}`} className="group">
                 <img
@@ -102,9 +120,9 @@ export function Home() {
 
       {/* News preview */}
       <section className="py-16">
-        <div className="mx-auto max-w-6xl px-8">
+        <div className="flex flex-col gap-6 mx-auto max-w-6xl px-8">
           {renderTitle("News")}
-          <h2 className="mb-8 text-3xl font-light text-[var(--color-text)]">
+          <h2 className=" text-2xl font-light text-body">
             Check the latest news
           </h2>
           <div className="grid gap-4 md:grid-cols-4">

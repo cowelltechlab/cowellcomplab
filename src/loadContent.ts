@@ -65,6 +65,7 @@ export type ProjectMeta = {
   slug: string;
   title?: string;
   image?: string;
+  description?: string;
   publications?: string[];
 };
 export type NewsMeta = {
@@ -104,6 +105,7 @@ export type PublicationMeta = {
   award?: string;
   abstract?: string;
   shortTitle?: string;
+  people?: string[];
 };
 
 function normalizeProjectMeta(row: Record<string, unknown>): ProjectMeta {
@@ -173,6 +175,14 @@ export function getPeopleList(): PersonMeta[] {
     const timeB = b.dateEntered ? new Date(b.dateEntered).getTime() : Infinity;
     return timeA - timeB;
   });
+}
+
+export function getPeopleBySlugs(slugs: string[]): PersonMeta[] {
+  const all = getPeopleList();
+  const bySlug = new Map(all.map((p) => [p.slug, p]));
+  return slugs
+    .map((slug) => bySlug.get(slug))
+    .filter((p): p is PersonMeta => p != null);
 }
 
 export function getPersonBySlug(

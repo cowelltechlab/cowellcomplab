@@ -33,7 +33,14 @@ export function ProjectDetail() {
       >
         ← Back to Projects
       </Link>
-      <h1 className="mb-2 text-3xl text-body">{data.title}</h1>
+      <img
+        src={data.image}
+        alt={data.title}
+        className="w-100 my-4 h-fit object-cover rounded-2xl mx-auto"
+      />
+      <h1 className="my-4 text-2xl md:text-3xl text-primary-dark">
+        {data.title}
+      </h1>
       <Markdown content={content} />
       {relatedPubs.length > 0 && (
         <section className="mt-12 pt-8 border-t border-gray-200">

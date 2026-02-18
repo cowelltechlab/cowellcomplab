@@ -6,6 +6,9 @@ month: "04"
 venue: "CHI"
 type: Conference
 image: "/img/publications/park2026why-1.png"
+people:
+  - hyesoo-park
+  - jennifer-kim
 ---
 
 _\* Both authors served as co-senior authors and jointly supervised the project._

@@ -1,5 +1,9 @@
 import { useParams, Link } from "react-router-dom";
-import { getPublicationBySlug } from "../loadContent";
+import {
+  getPublicationBySlug,
+  getPeopleBySlugs,
+  type PersonMeta,
+} from "../loadContent";
 import { Markdown } from "../components/Markdown";
 import {
   ArrowDownTrayIcon,
@@ -30,6 +34,9 @@ export function PublicationDetail() {
 
   const { data, content } = item;
 
+  const memberPeople: PersonMeta[] =
+    data.people && data.people.length > 0 ? getPeopleBySlugs(data.people) : [];
+
   const renderVenue = () => (
     <div className="flex flex-wrap gap-x-2 gap-y-1 font-semibold text-primary-lighter">
       {data.venue && data.year && (
@@ -52,6 +59,28 @@ export function PublicationDetail() {
   const renderAuthors = () => (
     <p className="text-lg sm:text-xl text-primary-dark">{data.authors}</p>
   );
+
+  const renderMemberCards = () =>
+    memberPeople.length > 0 && (
+      <section className="mt-2">
+        <div className="flex flex-wrap gap-3">
+          {memberPeople.map((person) => (
+            <div className="flex flex-col items-center w-32">
+              {person.image && (
+                <img
+                  src={person.image}
+                  alt={person.name}
+                  className="h-20 w-20 rounded-full object-cover"
+                />
+              )}
+              <p className="text-body-muted text-sm text-center mt-2">
+                {person.name}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
 
   const renderImage = () =>
     data.image && (
@@ -103,6 +132,7 @@ export function PublicationDetail() {
           {renderVenue()}
           {renderTitle()}
           {renderAuthors()}
+          {renderMemberCards()}
           <div className="mb-4 flex flex-wrap gap-4">
             {renderDoi()}
             {renderPDF()}

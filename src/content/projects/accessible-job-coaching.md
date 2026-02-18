@@ -1,8 +1,17 @@
 ---
-title: Accessible Job Coaching
+title: Accessible Job Coaching and Workplace
 year: "2025"
-image: "https://cdn.prod.website-files.com/6904ba90d4490eb73ece7429/69115850ff647ba5920d1b24_publication_1.png"
+image: "/img/projects/job.png"
+description: Job coaching description for the projects page
 publications:
   - hall2025understanding
   - hall2026ll
+  - hall2024designing
 ---
+
+Details for the project.
+
+### Titles
+
+- bullets 1
+- bullets 2

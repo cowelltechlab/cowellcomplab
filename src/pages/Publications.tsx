@@ -19,7 +19,7 @@ export function Publications() {
           const items = publications.filter((p) => p.year === year);
           return (
             <section key={year}>
-              <h2 className="mb-4 text-2xl font-medium text-primary">{year}</h2>
+              <h2 className="mb-4 md:text-3xl text-xl text-primary">{year}</h2>
               <ul className="space-y-6 pt-4">
                 {items.map((pub) => (
                   <PubItem key={pub.slug} pub={pub} />
