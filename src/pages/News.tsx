@@ -9,7 +9,7 @@ export function News() {
   return (
     <div className="mx-auto max-w-6xl px-8 py-12">
       <PageTitle title="News" />
-      <div className="md:grid md:grid-cols-3 gap-6">
+      <div className="flex flex-col md:grid md:grid-cols-3 gap-6">
         {news.map((n) => (
           <Link
             key={n.slug}

@@ -104,7 +104,7 @@ export function Home() {
                 <img
                   src={`.${p.image}`}
                   alt={p.title}
-                  className="w-full h-fit object-cover rounded-4xl group-hover:scale-110 transition-all duration-300 ease-out"
+                  className="w-full object-cover rounded-4xl group-hover:scale-110 transition-all duration-300 ease-out"
                 />
                 <h3
                   className="text-lg w-7/8 mx-auto translate-y-[-16px] bg-primary text-white px-6 py-6 rounded-2xl

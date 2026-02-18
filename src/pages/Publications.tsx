@@ -20,7 +20,7 @@ export function Publications() {
           return (
             <section key={year}>
               <h2 className="mb-4 md:text-3xl text-xl text-primary">{year}</h2>
-              <ul className="space-y-6 pt-4">
+              <ul className="flex flex-col gap-12 pt-4">
                 {items.map((pub) => (
                   <PubItem key={pub.slug} pub={pub} />
                 ))}

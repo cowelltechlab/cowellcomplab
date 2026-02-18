@@ -63,11 +63,11 @@ export function PubItem({ pub }: { pub: PublicationMeta }) {
     );
 
   return (
-    <li key={pub.slug} className="flex gap-6 sm:flex-row flex-col">
+    <li key={pub.slug} className="flex sm:gap-6 gap-4 sm:flex-row flex-col">
       <img
         src={pub.image ?? "vite.svg"}
         alt={pub.title}
-        className="sm:w-[160px] sm:h-[120px] w-full h-[100px] shrink-0 object-cover rounded-xl border border-primary-light"
+        className="sm:w-[160px] sm:h-[120px] w-full h-auto shrink-0 object-cover rounded-xl border border-primary-light"
       />
       <div className="flex flex-col gap-2">
         {renderTitle()}
