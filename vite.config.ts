@@ -6,5 +6,5 @@ import { nodePolyfills } from "vite-plugin-node-polyfills";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [nodePolyfills(), tailwindcss(), react()],
-  base: "/cowellcomplab/",
+  // base: "/cowellcomplab/",
 });

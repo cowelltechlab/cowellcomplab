@@ -12,7 +12,7 @@ import { NewsDetail } from "./pages/NewsDetail";
 
 function App() {
   return (
-    <BrowserRouter basename="/cowellcomplab/">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
