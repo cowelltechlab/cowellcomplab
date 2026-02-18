@@ -36,7 +36,7 @@ export function ProjectDetail() {
       <img
         src={`..${data.image}`}
         alt={data.title}
-        className="w-100 my-4 h-fit object-cover rounded-2xl mx-auto"
+        className="w-100 my-4 object-cover rounded-2xl mx-auto"
       />
       <h1 className="my-4 text-2xl md:text-3xl text-primary-dark">
         {data.title}
@@ -57,14 +57,14 @@ export function ProjectDetail() {
                   </h3>
                 </Link>
                 <p className="text-body-muted text-sm italic">{pub.authors}</p>
-                <div className="flex gap-4 mt-2">
+                <div className="flex sm:flex-row flex-col gap-4 mt-2">
                   {pub.abstract && (
                     <p className="text-body-muted text-sm">{pub.abstract}</p>
                   )}
                   <img
                     src={pub.image}
                     alt={pub.title}
-                    className="w-[220px] h-fit object-cover rounded-lg"
+                    className="sm:w-[220px] w-full sm:h-fit object-cover rounded-lg"
                   />
                 </div>
               </div>
