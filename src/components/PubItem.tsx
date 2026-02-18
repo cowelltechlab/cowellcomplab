@@ -5,6 +5,7 @@ import {
   LinkIcon,
   TrophyIcon,
 } from "@heroicons/react/16/solid";
+import { FadeInOnScroll } from "./FadeInOnScroll";
 
 export function PubItem({ pub }: { pub: PublicationMeta }) {
   const renderTitle = () => (
@@ -63,22 +64,24 @@ export function PubItem({ pub }: { pub: PublicationMeta }) {
     );
 
   return (
-    <li key={pub.slug} className="flex sm:gap-6 gap-4 sm:flex-row flex-col">
-      <img
-        src={pub.image ?? "vite.svg"}
-        alt={pub.title}
-        className="sm:w-[160px] sm:h-[120px] w-full h-auto shrink-0 object-cover rounded-xl border border-primary-light"
-      />
-      <div className="flex flex-col gap-2">
-        {renderTitle()}
-        {renderAuthors()}
-        <div className="flex items-center gap-3">
-          {renderVenue()}
-          {renderDOI()}
-          {renderAward()}
-          {renderPDF()}
+    <li key={pub.slug}>
+      <FadeInOnScroll className="flex sm:gap-6 gap-4 sm:flex-row flex-col">
+        <img
+          src={pub.image ?? "vite.svg"}
+          alt={pub.title}
+          className="sm:w-[160px] sm:h-[120px] w-full h-auto shrink-0 object-cover rounded-xl border border-primary-light"
+        />
+        <div className="flex flex-col gap-2">
+          {renderTitle()}
+          {renderAuthors()}
+          <div className="flex items-center gap-3">
+            {renderVenue()}
+            {renderDOI()}
+            {renderAward()}
+            {renderPDF()}
+          </div>
         </div>
-      </div>
+      </FadeInOnScroll>
     </li>
   );
 }

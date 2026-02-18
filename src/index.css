@@ -39,3 +39,15 @@ h6 {
   letter-spacing: -0.01em;
   line-height: 1.3;
 }
+
+/* Toast animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

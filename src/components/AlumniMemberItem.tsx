@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import type { PersonMeta } from "../loadContent";
 import { dateToShortString } from "../lib/dateFormat";
+import { FadeInOnScroll } from "./FadeInOnScroll";
 
 export default function AlumniMemberItem({ person }: { person: PersonMeta }) {
   return (
-    <div>
+    <FadeInOnScroll>
       <h3 className="text-lg mb-2">{person.name}</h3>
       <div className="flex flex-col text-sm text-body-muted font-light gap-0.5">
         <p>
@@ -38,6 +39,6 @@ export default function AlumniMemberItem({ person }: { person: PersonMeta }) {
           )}
         </div>
       </div>
-    </div>
+    </FadeInOnScroll>
   );
 }

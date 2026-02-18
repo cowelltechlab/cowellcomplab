@@ -5,6 +5,7 @@ import {
   EnvelopeIcon,
   HomeIcon,
 } from "@heroicons/react/16/solid";
+import { FadeInOnScroll } from "./FadeInOnScroll";
 
 export function CurrentMemberItem({ person }: { person: PersonMeta }) {
   const renderButton = (
@@ -23,7 +24,7 @@ export function CurrentMemberItem({ person }: { person: PersonMeta }) {
   );
 
   return (
-    <div className="flex gap-4">
+    <FadeInOnScroll className="flex gap-4">
       <img
         className="sm:w-[140px] sm:h-[140px] w-[100px] h-[100px] rounded-full object-cover shrink-0"
         src={person.image}
@@ -51,6 +52,6 @@ export function CurrentMemberItem({ person }: { person: PersonMeta }) {
             )}
         </div>
       </div>
-    </div>
+    </FadeInOnScroll>
   );
 }

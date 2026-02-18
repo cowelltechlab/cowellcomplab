@@ -9,10 +9,12 @@ import { Publications } from "./pages/Publications";
 import { PublicationDetail } from "./pages/PublicationDetail";
 import { News } from "./pages/News";
 import { NewsDetail } from "./pages/NewsDetail";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter basename="/cowellcomplab/">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

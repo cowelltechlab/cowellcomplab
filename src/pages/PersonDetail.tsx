@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { getPersonBySlug } from "../loadContent";
 import { Markdown } from "../components/Markdown";
+import { ScrollRevealContainer } from "../components/FadeInOnScroll";
 
 export function PersonDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -22,7 +23,7 @@ export function PersonDetail() {
 
   const { data, content } = item;
   return (
-    <div className="mx-auto max-w-2xl px-4 py-12">
+    <ScrollRevealContainer className="mx-auto max-w-2xl px-4 py-12">
       <Link
         to="/people"
         className="mb-6 inline-block text-[var(--color-accent)] hover:underline"
@@ -33,6 +34,6 @@ export function PersonDetail() {
         {data.title}
       </h1>
       <Markdown content={content} />
-    </div>
+    </ScrollRevealContainer>
   );
 }

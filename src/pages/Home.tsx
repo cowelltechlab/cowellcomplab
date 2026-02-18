@@ -3,6 +3,7 @@ import { getProjectsList, getNewsList } from "../loadContent";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import { LinkButton } from "../components/LinkButton";
 import { NewsItem } from "../components/NewsItem";
+import { ScrollRevealContainer } from "../components/FadeInOnScroll";
 
 export function Home() {
   const projects = getProjectsList().slice(0, 3);
@@ -31,7 +32,7 @@ export function Home() {
   };
 
   return (
-    <div>
+    <ScrollRevealContainer>
       {/* About Us */}
       <section className="bg-background-muted">
         <div className="mx-auto max-w-6xl flex flex-col md:flex-row gap-4 md:items-stretch">
@@ -133,6 +134,6 @@ export function Home() {
           <LinkButton linkTo="/news">View All News</LinkButton>
         </div>
       </section>
-    </div>
+    </ScrollRevealContainer>
   );
 }

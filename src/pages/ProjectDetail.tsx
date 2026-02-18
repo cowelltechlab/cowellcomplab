@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { getProjectBySlug, getPublicationsBySlugs } from "../loadContent";
 import { Markdown } from "../components/Markdown";
+import { ScrollRevealContainer } from "../components/FadeInOnScroll";
 
 export function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -26,7 +27,7 @@ export function ProjectDetail() {
     : [];
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-12">
+    <ScrollRevealContainer className="mx-auto max-w-4xl px-4 py-12">
       <Link
         to="/projects"
         className="mb-6 inline-block text-primary hover:underline"
@@ -46,7 +47,7 @@ export function ProjectDetail() {
         <section className="mt-12 pt-8 border-t border-gray-200">
           <ul className="flex flex-col gap-6">
             {relatedPubs.map((pub) => (
-              <div className="flex flex-col gap-2">
+              <div key={pub.slug} className="flex flex-col gap-2">
                 <Link
                   to={`/publications/${pub.slug}`}
                   className="text-body hover:text-accent transition-all duration-300 ease-out"
@@ -72,6 +73,6 @@ export function ProjectDetail() {
           </ul>
         </section>
       )}
-    </div>
+    </ScrollRevealContainer>
   );
 }

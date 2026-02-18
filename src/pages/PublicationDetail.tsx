@@ -5,6 +5,7 @@ import {
   type PersonMeta,
 } from "../loadContent";
 import { Markdown } from "../components/Markdown";
+import { ScrollRevealContainer } from "../components/FadeInOnScroll";
 import {
   ArrowDownTrayIcon,
   LinkIcon,
@@ -125,7 +126,7 @@ export function PublicationDetail() {
     );
 
   return (
-    <div className="mx-auto max-w-6xl px-8 py-12">
+    <ScrollRevealContainer className="mx-auto max-w-6xl px-8 py-12">
       {renderbackbutton()}
       <article className="pb-8">
         <div className="flex flex-col gap-3">
@@ -144,6 +145,6 @@ export function PublicationDetail() {
           <Markdown content={content} />
         </div>
       </article>
-    </div>
+    </ScrollRevealContainer>
   );
 }
