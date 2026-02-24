@@ -16,7 +16,7 @@ export function People() {
       <DocumentTitle section="People" />
       <PageTitle title="People" />
       <h2 className="mt-20 mb-8 text-2xl text-primary">Current Members</h2>
-      <div className="grid gap-y-12 gap-x-8 sm:grid-cols-2">
+      <div className="grid gap-y-12 gap-x-8 sm:grid-cols-3 lg:grid-cols-4">
         {currentMembers.map((person) => (
           <CurrentMemberItem key={person.slug} person={person} />
         ))}
