@@ -1,10 +1,16 @@
 import { useParams } from "react-router-dom";
-import { getProjectBySlug, getPublicationsBySlugs } from "../loadContent";
+import {
+  getPeopleBySlugs,
+  getProjectBySlug,
+  getPublicationsBySlugs,
+  type PersonMeta,
+} from "../loadContent";
 import { Markdown } from "../components/Markdown";
 import BackButton from "../components/BackButton";
 import RelatedPubItem from "../components/RelatedPubItem";
 import { DocumentTitle } from "../components/DocumentTitle";
 import { ScrollRevealContainer } from "../components/FadeInOnScroll";
+import { MemberCard } from "../components/MemberCard";
 
 export function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -24,6 +30,16 @@ export function ProjectDetail() {
     ? getPublicationsBySlugs(data.publications)
     : [];
 
+  const memberPeople: PersonMeta[] =
+    data.people && data.people.length > 0 ? getPeopleBySlugs(data.people) : [];
+
+  const renderMemberCards = () =>
+    memberPeople.length > 0 && (
+      <section className="mt-2 flex flex-wrap gap-3">
+        {memberPeople.map((person) => MemberCard({ person }))}
+      </section>
+    );
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
       <DocumentTitle section="Projects" />
@@ -38,6 +54,8 @@ export function ProjectDetail() {
           {data.title}
         </h1>
         <Markdown content={content} />
+        <hr className="my-6 border-gray-200" />
+        {renderMemberCards()}
         {relatedPubs.length > 0 && (
           <section className="mt-12 pt-8 border-t border-gray-200">
             <ul className="flex flex-col gap-6">

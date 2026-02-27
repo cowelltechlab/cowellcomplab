@@ -7,6 +7,8 @@ publications:
   - hall2025understanding
   - hall2026ll
   - hall2024designing
+people:
+  - hyesoo-park
 ---
 
 Details for the project.

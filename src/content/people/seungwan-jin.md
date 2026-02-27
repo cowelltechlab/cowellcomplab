@@ -2,8 +2,11 @@
 name: "Seungwan Jin"
 isCurrent: true
 degree: PHD
-dateEntered: 2023-08
-title: "Ph.D. Student"
+dateEntered: 2024-01
+title: "Ph. D. Candidate"
+school: School of Interactive Computing
+email: sjin306@gatech.edu
 program: "Machine Learning"
-image: "https://www.ira-realty.com/wp-content/uploads/2022/11/Team-Member-Female-Placeholder.jpg"
+image: "img/member/seungwan.jpeg"
+keyword: "Human-Robot Interaction"
 ---

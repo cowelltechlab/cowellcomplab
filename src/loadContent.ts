@@ -67,6 +67,7 @@ export type ProjectMeta = {
   image?: string;
   description?: string;
   publications?: string[];
+  people?: string[];
 };
 export type NewsMeta = {
   slug: string;
@@ -90,6 +91,7 @@ export type PersonMeta = {
   email?: string;
   website?: string;
   googleScholar?: string;
+  keyword?: string;
 };
 export type PublicationMeta = {
   slug: string;

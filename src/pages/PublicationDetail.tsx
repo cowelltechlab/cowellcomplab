@@ -13,6 +13,7 @@ import {
 } from "@heroicons/react/16/solid";
 import BackButton from "../components/BackButton";
 import { DocumentTitle } from "../components/DocumentTitle";
+import { MemberCard } from "../components/MemberCard";
 
 export function PublicationDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -57,23 +58,8 @@ export function PublicationDetail() {
 
   const renderMemberCards = () =>
     memberPeople.length > 0 && (
-      <section className="mt-2">
-        <div className="flex flex-wrap gap-3">
-          {memberPeople.map((person) => (
-            <div className="flex flex-col items-center w-32">
-              {person.image && (
-                <img
-                  src={person.image}
-                  alt={person.name}
-                  className="h-20 w-20 rounded-full object-cover"
-                />
-              )}
-              <p className="text-body-muted text-sm text-center mt-2">
-                {person.name}
-              </p>
-            </div>
-          ))}
-        </div>
+      <section className="mt-2 flex flex-wrap gap-3">
+        {memberPeople.map((person) => MemberCard({ person }))}
       </section>
     );
 

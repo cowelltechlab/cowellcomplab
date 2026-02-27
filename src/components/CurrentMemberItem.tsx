@@ -23,13 +23,29 @@ export function CurrentMemberItem({ person }: { person: PersonMeta }) {
     </Link>
   );
 
-  return (
-    <FadeInOnScroll className="flex flex-col sm:items-center gap-4">
+  const renderProfilePic = () => (
+    <div className="group relative rounded-full border border-primary-light overflow-hidden">
       <img
-        className="sm:w-[140px] sm:h-[140px] w-[100px] h-[100px] rounded-full object-cover shrink-0"
+        className="sm:w-36 sm:h-36 w-20 h-20 object-cover shrink-0 "
         src={person.image}
         alt={`A photo of ${person.name}`}
       />
+      {person.keyword && (
+        <div
+          className="absolute top-0 left-0 text-white bg-black w-full h-full flex items-center
+        transition-opacity duration-300 ease-out group-hover:opacity-60 opacity-0"
+        >
+          <span className="flex-col items-center p-4 text-center">
+            # {person.keyword}
+          </span>
+        </div>
+      )}
+    </div>
+  );
+
+  return (
+    <FadeInOnScroll className="flex flex-col sm:items-center gap-4">
+      {renderProfilePic()}
       <div className="flex flex-col sm:items-center gap-2">
         <h3 className="sm:text-xl text-lg">{person.name}</h3>
         <div className="flex flex-col sm:items-center sm:text-center text-body-muted font-light text-sm">
