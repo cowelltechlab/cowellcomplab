@@ -47,11 +47,15 @@ export function CurrentMemberItem({ person }: { person: PersonMeta }) {
     <FadeInOnScroll className="flex flex-col sm:items-center gap-4">
       {renderProfilePic()}
       <div className="flex flex-col sm:items-center gap-2">
-        <h3 className="sm:text-xl text-lg">{person.name}</h3>
+        <Link
+          to={`/people/${person.slug}`}
+          className="text-body hover:text-primary transition-all duration-300 ease-out"
+        >
+          <h3 className="sm:text-xl text-lg">{person.name}</h3>
+        </Link>
         <div className="flex flex-col sm:items-center sm:text-center text-body-muted font-light text-sm">
           <p>{person.title}</p>
           <p>{person.program}</p>
-          <p>{person.school}</p>
         </div>
         <div className="flex gap-2">
           {person.website &&

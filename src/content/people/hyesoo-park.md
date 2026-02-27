@@ -8,7 +8,7 @@ title: Ph.D. Student
 program: Computer Science
 website: https://hyesoopark.com
 email: hye@gatech.edu
-googleScholar: https://scholar.google.com/citations?user=RI56iIAAAAAJ&hl=ko
+googleScholar: https://scholar.google.com/citations?user=RI56iIAAAAAJ&hl=en
 keyword: Workplace Justice
 school: School of Interactive Computing
 ---

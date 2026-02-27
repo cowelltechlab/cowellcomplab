@@ -11,3 +11,5 @@ website: https://www.rachel-lowy.com/
 googleScholar: https://scholar.google.com/citations?user=wfEyZh8AAAAJ&hl=en
 email: rlowy3@gatech.edu
 ---
+
+My research asks how technology can foster meaningful learning and communication for neurodivergent people. I focus on co-designing in partnership with users to ensure design outcomes that reflect neurodivergent lived experiences. My current research focus is on integrating AI-driven solutions, such as Large Language Models (LLMs), to create educational environments that support and engage neurodiverse learners.
