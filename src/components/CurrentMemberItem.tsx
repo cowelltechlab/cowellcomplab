@@ -24,7 +24,7 @@ export function CurrentMemberItem({ person }: { person: PersonMeta }) {
   );
 
   const renderProfilePic = () => (
-    <div className="group relative rounded-full border border-primary-light overflow-hidden">
+    <div className="group relative rounded-full border border-primary-light overflow-hidden w-fit">
       <img
         className="sm:w-36 sm:h-36 w-20 h-20 object-cover shrink-0 "
         src={person.image}
