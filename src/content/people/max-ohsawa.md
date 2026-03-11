@@ -1,12 +1,15 @@
 ---
 name: "Max Ohsawa"
-isCurrent: false
-dateEntered: 2024-01
-dateLeft: 2026-01
+isCurrent: true
+dateEntered: 2025-01
 title: "MS Student"
 degree: MS
-program: "Computer Science"
+program: "CS HCI"
+school: College of Computing
+email: "max.ohsawa@gmail.com"
 currentAffiliation: CFO at Praxis Loop
-website: "http://linkedin.com/in/maxohsawa"
-image: "https://www.ira-realty.com/wp-content/uploads/2022/11/Team-Member-Female-Placeholder.jpg"
+linkedin: "https://scholar.google.com/citations?hl=en&user=8UUQGLkAAAAJ"
+image: "img/member/max.jpeg"
 ---
+
+Founder of two startups in the HCAI and data engineering spaces.
