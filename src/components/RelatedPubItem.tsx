@@ -21,7 +21,7 @@ export default function RelatedPubItem({ pub }: { pub: PublicationMeta }) {
         <img
           src={pub.image}
           alt={pub.title}
-          className="sm:w-[220px] w-full sm:h-fit object-cover rounded-lg"
+          className="sm:w-[220px] w-full h-auto object-cover rounded-lg shrink-0 self-start"
         />
       </div>
     </FadeInOnScroll>
